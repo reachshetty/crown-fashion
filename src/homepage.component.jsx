@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
+import './homepage.styles.scss'
 
-function App() {
+function HomePage() {
   return (
-    <div className='homePage'>
+    <div className='homepage'>
       <div className='directory-menu'>
         <div className='menu-item'>
           <div className='content'>
@@ -40,4 +41,4 @@ function App() {
   );
 }
 
-export default App;
+export default HomePage;
