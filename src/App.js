@@ -1,41 +1,21 @@
 import React from 'react';
+import { Route, Switch} from 'react-router-dom'
 import './App.css';
+import HomePage from './pages/homepage/homepage.component';
+
+const HatsPage = () => (
+  <div>
+    <h1> HATS PAGE</h1>
+  </div>)
+
 
 function App() {
   return (
-    <div className='homePage'>
-      <div className='directory-menu'>
-        <div className='menu-item'>
-          <div className='content'>
-            <h1 className='title'>HATS</h1>
-            <span className='subtitle'>Shop Now</span>
-          </div>
-        </div>
-        <div className='menu-item'>
-          <div className='content'>
-            <h1 className='title'>JACKETS</h1>
-            <span className='subtitle'>Shop Now</span>
-          </div>
-        </div>
-        <div className='menu-item'>
-          <div className='content'>
-            <h1 className='title'>SHOES</h1>
-            <span className='subtitle'>Shop Now</span>
-          </div>
-        </div>
-        <div className='menu-item'>
-          <div className='content'>
-            <h1 className='title'>MENS</h1>
-            <span className='subtitle'>Shop Now</span>
-          </div>
-        </div>
-        <div className='menu-item'>
-          <div className='content'>
-            <h1 className='title'>WOMEN</h1>
-            <span className='subtitle'>Shop Now</span>
-          </div>
-        </div>
-      </div>
+    <div >
+      <Switch>
+      <Route exact path='/' component={HomePage}></Route>
+      <Route path='/shop/hats' component={HatsPage}></Route>
+      </Switch>
     </div>
   );
 }

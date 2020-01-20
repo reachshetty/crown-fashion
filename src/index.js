@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom'
+import App from './App.js'
 import './index.css';
-import HomePage from './pages/homepage/homepage.component';
+//import HomePage from './pages/homepage/homepage.component';
 
-ReactDOM.render(<HomePage />, document.getElementById('root'));
+ReactDOM.render(
+<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));
 
